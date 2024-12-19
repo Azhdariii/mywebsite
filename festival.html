@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جشنواره</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .background-image {
+            background-image: url('https://via.placeholder.com/1920x1080.png?text=Festival+Event'); /* تصویر پس‌زمینه */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .content {
+            z-index: 1;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .message {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1>به جشنواره ما خوش آمدید!</h1>
+
+            <!-- تایمر شمارش معکوس -->
+            <div class="timer" id="countdown"></div>
+
+            <div class="message">
+                <p>آیا در جشنواره عضو شده‌اید؟</p>
+                <p>اگر نه، هم‌اکنون عضو شوید و از جوایز شگفت‌انگیز بهره‌مند شوید!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 جشنواره ما | تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        // تابع شمارش معکوس (کرنومتر)
+        function startCountdown() {
+            var eventDate = new Date();
+            eventDate.setHours(eventDate.getHours() + 24); // هر ۲۴ ساعت به روز می‌شود
+
+            var countdownElement = document.getElementById('countdown');
+
+            setInterval(function() {
+                var now = new Date().getTime();
+                var timeLeft = eventDate - now;
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = days + " روز " + hours + " ساعت "
+                    + minutes + " دقیقه " + seconds + " ثانیه ";
+
+                if (timeLeft < 0) {
+                    clearInterval(countdown);
+                    countdownElement.innerHTML = "زمان تمام شد!";
+                }
+            }, 1000);
+        }
+
+        // شروع شمارش معکوس
+        startCountdown();
+    </script>
+</body>
+</html>

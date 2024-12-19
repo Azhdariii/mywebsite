@@ -1,0 +1,126 @@
+/* استایل کلی */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+
+header {
+    background-color: #0077b5;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.message-box {
+    background-color: #ffcc00;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.social-media h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.social-icon span {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* آیکون تلگرام */
+.icon.telegram {
+    background-color: #0088cc;
+}
+
+.icon.telegram:hover {
+    background-color: #006fa6;
+}
+
+/* آیکون اینستاگرام */
+.icon.instagram {
+    background: linear-gradient(45deg, #f56040, #e1306c);
+}
+
+.icon.instagram:hover {
+    background: linear-gradient(45deg, #e04b2b, #d22753);
+}
+
+/* آیکون فیسبوک */
+.icon.facebook {
+    background-color: #3b5998;
+}
+
+.icon.facebook:hover {
+    background-color: #2d4373;
+}
+
+.back-home {
+    margin-top: 30px;
+}
+
+.back-button {
+    font-size: 18px;
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* تنظیمات ریسپانسیو برای نمایش بهتر در موبایل */
+@media (max-width: 600px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+}

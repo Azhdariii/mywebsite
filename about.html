@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحه درباره ما شرکت YAM">
+    <meta name="keywords" content="درباره ما, YAM, شرکت YAM">
+    <meta name="author" content="YAM Team">
+    <title>درباره ما | YAM</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header>
+        <h1 class="logo">YAM</h1>
+    </header>
+
+    <!-- منو -->
+    <nav class="nav-menu">
+        <button onclick="scrollToSection('about-section')">درباره ما</button>
+        <button onclick="scrollToSection('gallery-section')">تصاویر</button>
+        <button onclick="scrollToSection('details-section')">توضیحات</button>
+        <button onclick="scrollToSection('representatives-section')">لیست نمایندگان</button>
+        <button onclick="scrollToSection('warranty-section')">شرایط گارانتی</button>
+        <a href="index.html" class="home-button">بازگشت به Home</a>
+        <button onclick="changeLanguage()">تغییر زبان</button>
+    </nav>
+
+    <!-- بخش‌های اصلی صفحه -->
+    <section id="about-section" class="content-section">
+        <h2>درباره ما</h2>
+        <p>شرکت YAM با هدف ارائه محصولات دیجیتالی پیشرفته برای رفاه کاربران فعالیت می‌کند.</p>
+    </section>
+
+    <section id="gallery-section" class="content-section">
+        <h2>تصاویر</h2>
+        <div class="image-slider">
+            <img src="images/image1.jpg" alt="تصویر 1" class="slider-image">
+            <img src="images/image2.jpg" alt="تصویر 2" class="slider-image">
+            <img src="images/image3.jpg" alt="تصویر 3" class="slider-image">
+            <img src="images/image4.jpg" alt="تصویر 4" class="slider-image">
+        </div>
+    </section>
+
+    <section id="details-section" class="content-section">
+        <h2>توضیحات</h2>
+        <p>اطلاعات جامع درباره محصولات و خدمات YAM در این بخش ارائه می‌شود.</p>
+    </section>
+
+    <section id="representatives-section" class="content-section">
+        <h2>لیست نمایندگان</h2>
+        <p>نمایندگان شرکت YAM در سراسر کشور آماده خدمت‌رسانی به مشتریان عزیز هستند.</p>
+    </section>
+
+    <section id="warranty-section" class="content-section">
+        <h2>شرایط گارانتی</h2>
+        <p>تمام محصولات YAM دارای گارانتی ۱۲ ماهه و خدمات پس از فروش هستند.</p>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <p>تمام حقوق محفوظ است &copy; 2024 YAM</p>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
